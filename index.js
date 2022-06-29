@@ -10,7 +10,7 @@ const teamMembers = [];
 const idArray = [];
 
 
-
+// function to create manager
 function createManager() {
     console.log("Please build your team");
     inquirer.prompt([
@@ -75,6 +75,7 @@ function createManager() {
     });
 }
 
+// function to create the team
 function createTeam() {
 
     inquirer.prompt([
@@ -105,6 +106,7 @@ function createTeam() {
     });
 }
 
+// adding engineer in teamMembers
 function addEngineer() {
     console.log('engineer function');
     inquirer.prompt([
@@ -171,6 +173,7 @@ function addEngineer() {
     });
 }
 
+//adding intern in teamMembers
 function addIntern() {
     inquirer.prompt([
         {
@@ -237,12 +240,12 @@ function addIntern() {
 }
 
 
-
+// building the team and generating the html
 function buildTeam() {
 console.log(teamMembers);
 console.log(idArray);
     fs.writeFile("./dist/team.html", generateHtml(teamMembers), (err)=>
-    err ? console.log(err) : console.log('Success!'));
+    err ? console.log(err) : console.log('Success, team.html is generated!'));
 
 }
 

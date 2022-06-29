@@ -58,7 +58,7 @@ const generateTeam = team => {
         `;
     };
 
-
+// adding the employees based on their roles in html
 const html = [];
 
 html.push(team
